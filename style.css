@@ -1,0 +1,184 @@
+body {
+  background-color: #7bcad3;
+  font-family: "Comfortaa", cursive;
+}
+
+.card {
+  border-radius: 30px;
+  border: none;
+  padding: 50px;
+  background-color: #fffffa;
+  margin-top: 10px;
+  margin-left: 10px;
+  max-width: 95%;
+  box-shadow: 5px 5px 30px #247b7b;
+}
+
+.other-city {
+  margin-left: 2px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  padding: 2px 0;
+  font-size: 70%;
+  color: white;
+  box-shadow: 5px 5px 15px #c4c5e2;
+  background: hsla(185, 77%, 22%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(185, 77%, 22%, 1) 0%,
+    hsla(182, 38%, 35%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(185, 77%, 22%, 1) 0%,
+    hsla(182, 38%, 35%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(185, 77%, 22%, 1) 0%,
+    hsla(182, 38%, 35%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0D5C63", endColorstr="#37797B", GradientType=1 );
+}
+
+.other-city:hover {
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+.enter-city {
+  padding: 3px 10px;
+  margin-top: 10px;
+  width: 380px;
+}
+
+.form-control {
+  box-shadow: 5px 5px 15px #7eb0a8;
+  width: 430px;
+}
+
+.search-button {
+  font-size: 80%;
+  padding: 13px 30px;
+  margin: 20px 20px 0 0;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px 15px #c4c5e2;
+  color: white;
+  background: hsla(185, 77%, 22%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(185, 77%, 22%, 1) 0%,
+    hsla(182, 38%, 35%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(185, 77%, 22%, 1) 0%,
+    hsla(182, 38%, 35%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(185, 77%, 22%, 1) 0%,
+    hsla(182, 38%, 35%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0D5C63", endColorstr="#37797B", GradientType=1 );
+}
+
+.search-button:hover {
+  opacity: 0.95;
+}
+
+.main-city {
+  font-size: 34px;
+  color: #54585a;
+  text-align: center;
+  border: 2px solid #7eb0a8;
+  border-radius: 100px;
+  padding: 40px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  box-shadow: 5px 5px 8px #7eb0a8;
+  background-color: #fffffd;
+}
+
+.temperat {
+  font-size: 34px;
+  color: #54585a;
+}
+
+.time {
+  font-size: 50%;
+}
+
+.metric-system {
+  color: #54585a;
+  font-size: 28px;
+}
+
+.non-active {
+  font-size: 28px;
+  text-decoration: none;
+  color: #4361ee;
+}
+
+.active {
+  color: #54585a;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.active:hover {
+  cursor: default;
+  color: #54585a;
+}
+
+.celsius {
+  font-size: 28px;
+  color: #54585a;
+}
+
+.fahrenheit {
+  font-size: 28px;
+  color: #54585a;
+}
+
+small {
+  font-size: 70%;
+}
+
+.windhumid {
+  font-size: 15px;
+}
+
+.next-days {
+  color: #54585a;
+  padding: 40px 10px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 5px 5px 15px #7eb0a8;
+  background-color: #fffffd;
+  margin-top: 20px;
+}
+
+.foot {
+  font-size: 70%;
+  opacity: 0.65;
+  margin: 30px;
+}
+
+.footnote-link {
+  text-decoration: none;
+  color: #062a2d;
+  font-weight: bold;
+}
