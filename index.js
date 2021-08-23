@@ -3,10 +3,6 @@ let locationButton = document.querySelector("#locbutton");
 let londonButton = document.querySelector("#london");
 let nyButton = document.querySelector("#newyork");
 let tokyoButton = document.querySelector("#tokyo");
-let celsiusButton = document.querySelector("#celsius");
-let fahrenheitButton = document.querySelector("#fahrenheit");
-
-let celsiusTemperature = null;
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -26,25 +22,16 @@ function showTemp(response) {
   myCity.innerHTML = response.data.name;
 
   let temperature = document.querySelector("#weather-now");
-  temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
-
-  let celsiusTemp = document.querySelector("#celsius");
-  celsiusTemp.innerHTML = `°C`;
-
-  let breakElement = document.querySelector("#break");
-  breakElement.innerHTML = ` | `;
-
-  let fahrenheitTemp = document.querySelector("#fahrenheit");
-  fahrenheitTemp.innerHTML = `°F`;
+  temperature.innerHTML = `${Math.round(response.data.main.temp)}°C`;
 
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
 
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `🚩wind: ${Math.round(response.data.wind.speed)} km/h`;
+  wind.innerHTML = `wind: ${Math.round(response.data.wind.speed)} km/h`;
 
   let humidity = document.querySelector("#humid");
-  humidity.innerHTML = `💧humidity: ${response.data.main.humidity}%`;
+  humidity.innerHTML = `humidity: ${response.data.main.humidity}%`;
 
   let iconId = response.data.weather[0].icon;
   let weatherIcon = document.querySelector("#icon");
@@ -52,8 +39,6 @@ function showTemp(response) {
     "src",
     `https://openweathermap.org/img/wn/${iconId}@2x.png`
   );
-
-  celsiusTemperature = response.data.main.temp;
 
   getForecast(response.data.coord);
 }
@@ -90,24 +75,6 @@ function showTokyoWeather(event) {
   let apiKey = "889ddb82ac517574ec1ec04289422270";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=tokyo&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
-}
-
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#weather-now");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
-  fahrenheitButton.classList.add("active");
-  celsiusButton.classList.remove("active");
-  celsiusButton.classList.add("non-active");
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#weather-now");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-  celsiusButton.classList.add("active");
-  fahrenheitButton.classList.remove("active");
 }
 
 function formatDay(timestamp) {
@@ -163,8 +130,6 @@ locationButton.addEventListener("click", findLocation);
 londonButton.addEventListener("click", showLondonWeather);
 nyButton.addEventListener("click", showNewYorkWeather);
 tokyoButton.addEventListener("click", showTokyoWeather);
-fahrenheitButton.addEventListener("click", showFahrenheit);
-celsiusButton.addEventListener("click", showCelsius);
 
 let timeNow = document.querySelector("#timenow");
 let now = new Date();

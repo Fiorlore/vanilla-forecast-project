@@ -120,38 +120,6 @@ body {
   font-size: 50%;
 }
 
-.metric-system {
-  color: #54585a;
-  font-size: 28px;
-}
-
-.non-active {
-  font-size: 28px;
-  text-decoration: none;
-  color: #4361ee;
-}
-
-.active {
-  color: #54585a;
-  font-size: 28px;
-  text-decoration: none;
-}
-
-.active:hover {
-  cursor: default;
-  color: #54585a;
-}
-
-.celsius {
-  font-size: 28px;
-  color: #54585a;
-}
-
-.fahrenheit {
-  font-size: 28px;
-  color: #54585a;
-}
-
 small {
   font-size: 70%;
 }
