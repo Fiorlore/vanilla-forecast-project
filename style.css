@@ -171,6 +171,10 @@ small {
   margin-top: 20px;
 }
 
+.temp-min {
+  opacity: 60%;
+}
+
 .foot {
   font-size: 70%;
   opacity: 0.65;
